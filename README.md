@@ -68,3 +68,18 @@ GraphQL works best for the following scenarios:
    
 ###### Resource 
 [When to use GraphQl](https://dzone.com/articles/why-and-when-to-use-graphql-1)
+
+# Design Pattern that can be implemented using GraphQl
+
+## The Composite Pattern
+### What is composite pattern?
+Composite pattern is used where we need to treat a group of objects in similar way as a single object. Composite pattern composes objects in term of a tree structure to represent part as well as whole hierarchy. This type of design pattern comes under structural pattern as this pattern creates a tree structure of group of objects.
+
+This pattern creates a class that contains group of its own objects. This class provides ways to modify its group of same objects.
+
+### Usage of pattern with GraphQl
+Use when you want to aggregate data from multiple places into one convenient api.
+
+![](https://miro.medium.com/max/1400/1*Zv40o5M183Ejk6bhB25KGw.png "The Composite Pattern")
+
+

@@ -80,4 +80,44 @@ This pattern creates a class that contains group of its own objects. This class 
 ### Usage of pattern with GraphQl
 Use when you want to aggregate data from multiple places into one convenient api.
 
-![](https://miro.medium.com/max/1400/1*Zv40o5M183Ejk6bhB25KGw.png "The Composite Pattern")
+![](https://miro.medium.com/max/1400/1*Zv40o5M183Ejk6bhB25KGw.png "The Composite Pattern Usage")
+
+###### Resource
+[composite_pattern](https://www.tutorialspoint.com/design_pattern/composite_pattern.htm)
+[Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
+ 
+## Proxy Pattern
+### What is proxy pattern?
+The Proxy pattern allows us to create an intermediary that acts as an interface to another resource, while also hiding the underlying complexity of the component.
+
+### Usage of pattern with GraphQl
+Use when you want to add functionality to an old api.
+![](https://miro.medium.com/max/1400/1*d9FYrp9aGIPTEu4GRqgspQ.png "Proxy pattern Usage")
+
+###### Resource
+[proxy pattern explaination](https://www.baeldung.com/java-proxy-pattern)
+[Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
+
+## Facade Pattern
+### What is facade pattern?
+Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system. This type of design pattern comes under structural pattern as this pattern adds an interface to existing system to hide its complexities.
+
+This pattern involves a single class which provides simplified methods required by client and delegates calls to methods of existing system classes.
+
+### Usage of pattern with GraphQl
+Use when you want to simplify a complex api.
+The difference between a proxy and a facade is simple. Proxies — represents the original, perhaps add some functionality like authentication. Facade — simplifies the original.
+
+![](https://miro.medium.com/max/1400/1*LsjlCJLOC1561MysSVJSTA.png "Facade pattern Usage")
+
+###### Resource
+[Facade Pattern explaination](https://www.tutorialspoint.com/design_pattern/facade_pattern.htm)
+[Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
+
+## Multi-Pattern: Combination
+It is completely possible to mix and mash these patterns. For example in a composite pattern you might also need to add a facade to an older api.
+[Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
+
+## Anti-Pattern: Do Nothing Proxy
+You should not just add GraphQL as a wrapper to your existing API for the sake of doing so. Most of these patterns that are server to server have performance considerations. Instead if you want to provide the exact same access with a different interface, consider developing a web sdk for your clients.
+[Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)

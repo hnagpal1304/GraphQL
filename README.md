@@ -29,6 +29,8 @@ Simply describe the object and the fields you’d like from that object you like
 # Is GraphQL a programming language?
 GraphQL is a specification. This means it is an abstract set of rules which can be implemented in any language. This means you can write a GraphQL API in any language, at least any language in which a GraphQL library has been writtern (which at this point is pretty much all of them).
 
+![](http://spec.graphql.org/ "Latest spec")
+
 ###### Resource
 [Detailed Explaination](https://www.quora.com/Is-GraphQL-a-programming-language)
 

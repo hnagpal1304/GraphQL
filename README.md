@@ -10,7 +10,8 @@ GraphQL is a query language that lets you write queries using an object structur
 So rather than use an SQL query like:
 `SELECT name, id, description FROM projects`
 Simply describe the object and the fields you’d like from that object you like so:
-`
+
+```
 {
   projects {
     id
@@ -18,10 +19,11 @@ Simply describe the object and the fields you’d like from that object you like
     description
   }
 }
-`
+```
 
 ###### Resource
 [A query language for your API](https://graphql.org/)
+
 [Medium article](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
 
 # Why use GraphQL?

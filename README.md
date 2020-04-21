@@ -142,10 +142,11 @@ You should not just add GraphQL as a wrapper to your existing API for the sake o
 
 ###### Resource
 [Dzone Article](https://dzone.com/articles/graphql-core-features-architecture-pros-and-cons)
+
 [Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
 
 # GraphQl Primary Concept
-*Query:* Read data.
-*Mutation:* Write data.
-*Subscription:* Observe Event and automatically send data.
+1. Query: Read data.
+2. Mutation: Write data.
+3. Subscription: Observe Event and automatically send data.
 

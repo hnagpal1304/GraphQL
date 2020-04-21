@@ -26,6 +26,12 @@ Simply describe the object and the fields you’d like from that object you like
 
 [Medium article](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
 
+# Is GraphQL a programming language?
+GraphQL is a specification. This means it is an abstract set of rules which can be implemented in any language. This means you can write a GraphQL API in any language, at least any language in which a GraphQL library has been writtern (which at this point is pretty much all of them).
+
+###### Resource
+[Detailed Explaination](https://www.quora.com/Is-GraphQL-a-programming-language)
+
 # Why use GraphQL?
 
 ## Strongly-typed Schema
@@ -116,8 +122,25 @@ The difference between a proxy and a facade is simple. Proxies — represents th
 
 ## Multi-Pattern: Combination
 It is completely possible to mix and mash these patterns. For example in a composite pattern you might also need to add a facade to an older api.
+###### Resource
 [Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
 
 ## Anti-Pattern: Do Nothing Proxy
 You should not just add GraphQL as a wrapper to your existing API for the sake of doing so. Most of these patterns that are server to server have performance considerations. Instead if you want to provide the exact same access with a different interface, consider developing a web sdk for your clients.
+###### Resource
 [Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
+
+# Rest vs GraphQL
+
+![](https://www.altexsoft.com/media/2019/03/word-image-5.png "Rest vs GraphQL")
+
+### Rest Example
+![](https://miro.medium.com/max/1400/1*oI0gd6_n6-E9K_NcHgMhUw.png "Rest Example")
+
+### GraphQL Example
+![](https://miro.medium.com/max/1400/1*-S7vILUNs2sABozisfBQVw.png "Rest Example")
+
+###### Resource
+[Dzone Article](https://dzone.com/articles/graphql-core-features-architecture-pros-and-cons)
+[Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
+

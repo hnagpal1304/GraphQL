@@ -22,9 +22,10 @@ Simply describe the object and the fields you’d like from that object you like
 
 ###### Resource
 [A query language for your API](https://graphql.org/)
-[A query language for your API](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
+[Medium article](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
 
 # Why use GraphQL?
+
 ## Strongly-typed Schema
 All the types (such as Boolean, String, Int, Float, ID, Scalar) supported by the API are specified in the schema in GraphQL Schema Definition Language (SDL), which helps determine the data that is available and the form it exists in. This, consequently, makes GraphQL less error-prone, and more validated, and provides auto-completion for supported IDE/editors.
 
@@ -56,3 +57,12 @@ content_type
 }`
 ###### Resource 
 [Why GraphQl](https://dzone.com/articles/why-and-when-to-use-graphql-1)
+
+# When to use GraphQl
+GraphQL works best for the following scenarios:
+1. Apps for devices such as mobile phones, smartwatches, and IoT devices, where bandwidth usage matters.
+2. Applications where nested data needs to be fetched in a single call.
+   * For example, a blog or social networking platform where posts need to be fetched along with nested comments and commenters details.
+   
+###### Resource 
+[When to use GraphQl](https://dzone.com/articles/why-and-when-to-use-graphql-1)

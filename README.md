@@ -277,6 +277,11 @@ query {
     id
     avatarUrl
     name
+    status {
+      id
+      emoji
+      message
+    }
   }
 }
 ```

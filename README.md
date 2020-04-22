@@ -29,7 +29,7 @@ Simply describe the object and the fields you’d like from that object you like
 # Is GraphQL a programming language?
 GraphQL is a specification. This means it is an abstract set of rules which can be implemented in any language. This means you can write a GraphQL API in any language, at least any language in which a GraphQL library has been writtern (which at this point is pretty much all of them).
 
-![](http://spec.graphql.org/ "Latest spec")
+[Latest spec](http://spec.graphql.org/)
 
 ###### Resource
 [Detailed Explaination](https://www.quora.com/Is-GraphQL-a-programming-language)
@@ -54,17 +54,17 @@ In REST architecture, developers create new versions (e.g., api.domain.com/v1/, 
 ## Transform Fields and Resolve With Required Shape
 A user can define an alias for fields, and each of the fields can be resolved into different values. Consider images transformation API, where a user wants to transform multiple types of images using GraphQL. The query looks like this:
 
-`
+```
 query {
             images {
                         title
                         thumbnail: url(transformation: {width: 50, height: 50})
                         original: url,
                         low_quality: url(transformation: {quality: 50})
-            file_size
-content_type
-  }
-}`
+                        file_size
+                        content_type
+                   }
+}```
 ###### Resource 
 [Why GraphQl](https://dzone.com/articles/why-and-when-to-use-graphql-1)
 
@@ -104,6 +104,7 @@ Use when you want to add functionality to an old api.
 
 ###### Resource
 [proxy pattern explaination](https://www.baeldung.com/java-proxy-pattern)
+
 [Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
 
 ## Facade Pattern
@@ -120,6 +121,7 @@ The difference between a proxy and a facade is simple. Proxies — represents th
 
 ###### Resource
 [Facade Pattern explaination](https://www.tutorialspoint.com/design_pattern/facade_pattern.htm)
+
 [Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
 
 ## Multi-Pattern: Combination
@@ -285,6 +287,6 @@ query {
   }
 }
 ```
-
+### 
 
 

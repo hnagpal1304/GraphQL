@@ -64,7 +64,9 @@ query {
                         file_size
                         content_type
                    }
-}```
+}
+```
+
 ###### Resource 
 [Why GraphQl](https://dzone.com/articles/why-and-when-to-use-graphql-1)
 

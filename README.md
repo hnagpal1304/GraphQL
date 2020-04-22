@@ -152,3 +152,6 @@ You should not just add GraphQL as a wrapper to your existing API for the sake o
 2. Mutation: Write data.
 3. Subscription: Observe Event and automatically send data.
 
+## Types
+![](file:///Users/hnagpal/Desktop/Graphql%20scalar%20Types.png "Scalar Types")
+

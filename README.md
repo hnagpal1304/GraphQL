@@ -94,6 +94,7 @@ Use when you want to aggregate data from multiple places into one convenient api
 
 ###### Resource
 [composite_pattern](https://www.tutorialspoint.com/design_pattern/composite_pattern.htm)
+
 [Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
  
 ## Proxy Pattern

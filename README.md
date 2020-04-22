@@ -245,9 +245,21 @@ query Documents($title: String) {
 
 ($title: String) is the variable definition. title is the variable name and it is prefixed by $, followed by the type in this case String.
 
+
 ###### Resource
 [Schema Types](https://graphql.org/learn/schema/)
 [Core Concept](https://medium.com/software-insight/graphql-queries-mutations-and-subscriptions-286522b263d9)
+
+# Hands on section to write Queries
+We will use **GraphiQL** an in-browser IDE for writing, validating and testing GraphQL queries.
+
+## Prerequisite: 
+GitHub account. 
+
+**NOTE:** Github uses real production data 
+[GitHub](https://developer.github.com/v4/explorer/)
+
+
 
 
 

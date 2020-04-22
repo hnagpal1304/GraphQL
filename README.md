@@ -165,11 +165,11 @@ You should not just add GraphQL as a wrapper to your existing API for the sake o
 ### Scalar Types
 GraphQL comes with a set of default scalar types out of the box:
 
-Int: A signed 32‐bit integer.
-Float: A signed double-precision floating-point value.
-String: A UTF‐8 character sequence.
-Boolean: true or false.
-ID: The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a cache. The ID type is serialized in the same way as a String; however, defining it as an ID signifies that it is not intended to be human‐readable.
+1. **Int:** A signed 32‐bit integer.
+2. **Float:** A signed double-precision floating-point value.
+3. **String:** A UTF‐8 character sequence.
+4. **Boolean:** true or false.
+5. **ID:** The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a cache. The ID type is serialized in the same way as a String; however, defining it as an ID signifies that it is not intended to be human‐readable.
 
 ### Enumeration types
 Also called Enums, enumeration types are a special kind of scalar that is restricted to a particular set of allowed values. This allows you to:
@@ -290,6 +290,6 @@ query {
   }
 }
 ```
-### 
+ 
 
 

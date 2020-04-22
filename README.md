@@ -256,10 +256,30 @@ We will use **GraphiQL** an in-browser IDE for writing, validating and testing G
 ## Prerequisite: 
 GitHub account. 
 
-**NOTE:** Github uses real production data 
-[GitHub](https://developer.github.com/v4/explorer/)
+**NOTE:** Github GraphQL Exploreres uses real, live, production data 
 
+[GitHub Developer Explorer](https://developer.github.com/v4/explorer/)
 
+### Fields
+```
+query { 
+  viewer { 
+    login
+  }
+}
+```
+
+```
+query { 
+  viewer { 
+    login
+    bio
+    id
+    avatarUrl
+    name
+  }
+}
+```
 
 
 

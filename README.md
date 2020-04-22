@@ -148,10 +148,106 @@ You should not just add GraphQL as a wrapper to your existing API for the sake o
 [Explaination of usage](https://medium.com/@JeffLombardJr/when-and-why-to-use-graphql-24f6bce4839d)
 
 # GraphQl Primary Concept
-1. Query: Read data.
-2. Mutation: Write data.
-3. Subscription: Observe Event and automatically send data.
+1. **Query:** are used by the client to request the data it needs from the server.
+2. **Mutation:** is the key. In GraphQL, mutations are used to CUD
+  * Create new data
+  * Update existing data
+  * Delete existing data
+3. **Subscription:**  are a way to create and maintain real time connection to the server. This enables the client to get immediate information about related events. Basically, a client subscribes to an event in the server, and whenever that event is called, the server will send the corresponding data to the client.
 
 ## Types
-![](file:///Users/hnagpal/Desktop/Graphql%20scalar%20Types.png "Scalar Types")
+
+### Scalar Types
+GraphQL comes with a set of default scalar types out of the box:
+
+Int: A signed 32‐bit integer.
+Float: A signed double-precision floating-point value.
+String: A UTF‐8 character sequence.
+Boolean: true or false.
+ID: The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a cache. The ID type is serialized in the same way as a String; however, defining it as an ID signifies that it is not intended to be human‐readable.
+
+### Enumeration types
+Also called Enums, enumeration types are a special kind of scalar that is restricted to a particular set of allowed values. This allows you to:
+
+Validate that any arguments of this type are one of the allowed values
+Communicate through the type system that a field will always be one of a finite set of values
+Here's what an enum definition might look like in the GraphQL schema language:
+
+```
+enum Episode {
+  NEWHOPE
+  EMPIRE
+  JEDI
+}
+```
+This means that wherever we use the type Episode in our schema, we expect it to be exactly one of NEWHOPE, EMPIRE, or JEDI.
+
+### Object types and fields
+The most basic components of a GraphQL schema are object types, which just represent a kind of object you can fetch from your service, and what fields it has. In the GraphQL schema language, we might represent it like this:
+
+```
+type Character {
+  name: String!
+  appearsIn: [Episode!]!
+}
+```
+
+The language is pretty readable, but let's go over it so that we can have a shared vocabulary:
+
+1. **Character** is a GraphQL Object Type, meaning it's a type with some fields. Most of the types in your schema will be object types.
+2. **name** and appearsIn are fields on the Character type. That means that name and appearsIn are the only fields that can appear in any part of a GraphQL query that operates on the Character type.
+3. **String** is one of the built-in scalar types - these are types that resolve to a single scalar object, and can't have sub-selections in the query. We'll go over scalar types more later.
+4. **String!** means that the field is non-nullable, meaning that the GraphQL service promises to always give you a value when you query this field. In the type language, we'll represent those with an exclamation mark.
+5. **[Episode!]!** represents an array of Episode objects. Since it is also non-nullable, you can always expect an array (with zero or more items) when you query the appearsIn field. And since Episode! is also non-nullable, you can always expect every item of the array to be an Episode object.
+
+### Arguments
+Every field on a GraphQL object type can have zero or more arguments, for example the length field below:
+```
+type Starship {
+  id: ID!
+  name: String!
+  length(unit: LengthUnit = METER): Float
+}
+```
+
+**NOTE:** All arguments are named. Unlike languages like JavaScript and Python where functions take a list of ordered arguments, **all arguments in GraphQL are passed by name specifically**. In this case, the length field has one defined argument, unit. 
+
+### The Query and Mutation type
+Every GraphQL service has a query type and may or may not have a mutation type. These types are the same as a regular object type, but they are special because they define the entry point of every GraphQL query.
+
+```
+type Query {
+  author_details: [Author]
+}
+
+type Mutation {
+ addAuthor(firstName: String, lastName: String) : Author
+}
+
+```
+
+It's important to remember that other than the special status of being the "entry point" into the schema, the Query and Mutation types are the same as any other GraphQL object type, and their fields work exactly the same way.
+
+### Variables
+are used to factor dynamic values out of the query and pass them as a separate dictionary.
+
+For example, if we have a search field where a user types in the title of documents he or she wants to view. To allow that, we’d use variables like this:
+
+```
+query Documents($title: String) {
+  document(title: $title) {
+    title
+    
+    content
+  }
+}
+```
+
+($title: String) is the variable definition. title is the variable name and it is prefixed by $, followed by the type in this case String.
+
+###### Resource
+[Schema Types](https://graphql.org/learn/schema/)
+[Core Concept](https://medium.com/software-insight/graphql-queries-mutations-and-subscriptions-286522b263d9)
+
+
 
